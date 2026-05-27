@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AuraAI Upload Resume</title>
+
+    <link
+        rel="stylesheet"
+        href="upload.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+
+            <a
+                href="dashboard.html"
+                class="logo-link"
+            >
+
+                <div class="logo-section">
+
+                    <div class="logo-icon">
+
+                        <i class="fas fa-brain"></i>
+
+                    </div>
+
+                    <div class="logo-text">
+
+                        <h1>Aura AI</h1>
+
+                        <p>RECRUITER COMMAND</p>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+            <!-- MENU -->
+
+            <nav>
+
+                <a href="dashboard.html">
+
+                    <i class="fas fa-chart-line"></i>
+
+                    Dashboard
+
+                </a>
+
+                <a
+                    href="upload.html"
+                    class="active"
+                >
+
+                    <i class="fas fa-upload"></i>
+
+                    Upload Resume
+
+                </a>
+
+                <a href="settings.html">
+
+                    <i class="fas fa-gear"></i>
+
+                    Settings
+
+                </a>
+
+                <a href="support.html">
+
+                    <i class="fas fa-headset"></i>
+
+                    Support
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <div class="page-header">
+
+                <h1>
+                    AI Resume Screening
+                </h1>
+
+                <p>
+                    Upload your resume and get
+                    AI-powered analysis instantly.
+                </p>
+
+            </div>
+
+            <!-- TOP GRID -->
+
+            <div class="top-grid">
+
+                <!-- UPLOAD CARD -->
+
+                <div class="card upload-card">
+
+                    <h2>
+                        Upload Resume
+                    </h2>
+
+                    <div class="upload-box">
+
+                        <div class="upload-icon">
+
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                        </div>
+
+                        <h3>
+                            Drag & Drop Resume
+                        </h3>
+
+                        <p>
+                            PDF & DOCX Supported
+                        </p>
+
+                        <!-- HIDDEN FILE INPUT -->
+
+                        <input
+                            type="file"
+                            id="resumeFile"
+                            accept=".pdf,.docx"
+                            hidden
+                        >
+
+                        <!-- BUTTON -->
+
+                        <button
+                            type="button"
+                            id="selectResumeBtn"
+                            class="select-btn"
+                        >
+                            Select Resume
+                        </button>
+
+                        <!-- FILE NAME -->
+
+                        <p id="selectedFileName">
+
+                            No file selected
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- JOB DESCRIPTION -->
+
+                <div class="card">
+
+                    <h2>
+                        Job Description
+                    </h2>
+
+                    <textarea
+                        id="jobDescription"
+                        placeholder="Paste job description here..."
+                    ></textarea>
+
+                    <!-- ANALYZE BUTTON -->
+
+                    <div class="job-btn-wrapper">
+
+                        <button id="analyzeBtn">
+
+                            Analyze Resume
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- LOADING -->
+
+            <div
+                id="loadingSection"
+                class="loading"
+            >
+
+                <div class="loader"></div>
+
+                <p>
+                    Analyzing Resume...
+                </p>
+
+            </div>
+
+            <!-- RESULTS -->
+
+            <div
+                id="resultSection"
+                class="result-grid"
+            ></div>
+
+            <!-- NEXT RESUME -->
+
+            <div class="next-resume-section">
+
+                <button id="nextResumeBtn">
+
+                    Upload Next Resume
+
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="upload.js"></script>
+
+</body>
+
+</html>

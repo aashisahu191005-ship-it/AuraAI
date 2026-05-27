@@ -1,0 +1,419 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#07122f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.dashboard-container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar{
+    width:260px;
+    background:#0b163d;
+    padding:22px 18px;
+
+    display:flex;
+    flex-direction:column;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo-link{
+    text-decoration:none;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    margin-bottom:34px;
+}
+
+.logo-icon{
+    width:58px;
+    height:58px;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        #a855f7,
+        #6366f1
+    );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:
+        0 0 18px rgba(255,255,255,0.12),
+        0 8px 24px rgba(139,92,246,0.35);
+}
+
+.logo-icon i{
+    color:white;
+    font-size:25px;
+}
+
+.logo-text h1{
+    color:white;
+    font-size:22px;
+    margin-bottom:3px;
+}
+
+.logo-text p{
+    color:#94a3b8;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+/* =========================================
+   SIDEBAR MENU
+========================================= */
+
+.sidebar-menu{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.sidebar-menu a{
+    text-decoration:none;
+    color:white;
+
+    padding:14px 16px;
+
+    border-radius:14px;
+
+    transition:0.3s;
+
+    font-size:16px;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu .active{
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #2563eb
+    );
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content{
+    flex:1;
+    padding:24px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.dashboard-header{
+    margin-bottom:22px;
+}
+
+.dashboard-header h1{
+    font-size:34px;
+    margin-bottom:6px;
+}
+
+.dashboard-header p{
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+/* =========================================
+   TOP CARDS
+========================================= */
+
+.cards-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap:16px;
+
+    margin-bottom:22px;
+}
+
+.card{
+    background:#10204f;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+}
+
+.card h3{
+    color:#cbd5e1;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.card h2{
+    font-size:24px;
+    line-height:1.4;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+
+/* =========================================
+   FILE OVERFLOW FIX
+========================================= */
+
+#uploadedFile{
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    word-break:break-word;
+
+    overflow-wrap:break-word;
+
+    white-space:normal;
+
+    max-width:100%;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+/* =========================================
+   DASHBOARD CARD
+========================================= */
+
+.dashboard-card{
+    background:#10204f;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.dashboard-card h2{
+    margin-bottom:16px;
+    font-size:20px;
+}
+
+/* =========================================
+   FULL WIDTH
+========================================= */
+
+.full-width{
+    grid-column:span 2;
+}
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.profile-content{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.profile-avatar{
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #2563eb
+    );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.profile-avatar i{
+    font-size:24px;
+}
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill-tag{
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #2563eb
+    );
+
+    padding:8px 14px;
+
+    border-radius:40px;
+
+    font-size:12px;
+}
+
+/* =========================================
+   SUMMARY / AI RECOMMENDATION
+========================================= */
+
+#summaryText{
+    line-height:1.8;
+    color:#dbe4ff;
+    font-size:14px;
+}
+
+/* =========================================
+   HISTORY
+========================================= */
+
+.history-item{
+
+    background:#16275f;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    margin-bottom:12px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.history-item:hover{
+
+    transform:translateY(-2px);
+
+    background:#1b3275;
+}
+
+.history-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+.history-file{
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    word-break:break-word;
+
+    flex:1;
+}
+
+.history-score{
+
+    color:#c084fc;
+
+    font-weight:600;
+}
+
+/* =========================================
+   EMPTY STATES
+========================================= */
+
+.empty-history,
+.empty-skill{
+
+    color:#94a3b8;
+
+    font-size:14px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1100px){
+
+    .dashboard-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full-width{
+        grid-column:span 1;
+    }
+
+    .cards-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    .dashboard-container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+    .cards-grid{
+        grid-template-columns:1fr;
+    }
+
+    .main-content{
+        padding:18px;
+    }
+}

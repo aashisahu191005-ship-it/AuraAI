@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AuraAI Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <!-- PREMIUM LOGO -->
+
+            <a
+                href="dashboard.html"
+                class="logo-link"
+            >
+
+                <div class="logo-section">
+
+                    <div class="logo-icon">
+
+                        <i class="fas fa-brain"></i>
+
+                    </div>
+
+                    <div class="logo-text">
+
+                        <h1>Aura AI</h1>
+
+                        <p>RECRUITER COMMAND</p>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+            <!-- MENU -->
+
+            <nav class="sidebar-menu">
+
+                <a
+                    href="dashboard.html"
+                    class="active"
+                >
+
+                    <i class="fas fa-chart-line"></i>
+
+                    Dashboard
+
+                </a>
+
+                <a href="upload.html">
+
+                    <i class="fas fa-upload"></i>
+
+                    Upload Resume
+
+                </a>
+
+                <a href="settings.html">
+
+                    <i class="fas fa-gear"></i>
+
+                    Settings
+
+                </a>
+
+                <a href="support.html">
+
+                    <i class="fas fa-headset"></i>
+
+                    Support
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <!-- MAIN -->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <div class="dashboard-header">
+
+                <h1>
+                    AI Resume Dashboard
+                </h1>
+
+                <p>
+                    AI-powered resume analysis insights
+                </p>
+
+            </div>
+
+            <!-- TOP CARDS -->
+
+            <div class="cards-grid">
+
+                <div class="card">
+
+                    <h3>Resume Score</h3>
+
+                    <h2 id="resumeScore">
+                        --%
+                    </h2>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Predicted Role</h3>
+
+                    <h2 id="predictedRole">
+                        ---
+                    </h2>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Match Percentage</h3>
+
+                    <h2 id="matchPercentage">
+                        --%
+                    </h2>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Uploaded File</h3>
+
+                    <h2 id="uploadedFile">
+                        ---
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <!-- MAIN GRID -->
+
+            <div class="dashboard-grid">
+
+                <!-- PROFILE -->
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Candidate Profile
+                    </h2>
+
+                    <div class="profile-content">
+
+                        <div class="profile-avatar">
+
+                            <i class="fas fa-user"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3 id="candidateName">
+                                Candidate
+                            </h3>
+
+                            <p id="candidateRole">
+                                No role available
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- SKILLS -->
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Extracted Skills
+                    </h2>
+
+                    <div
+                        id="skillsContainer"
+                        class="skills-container"
+                    >
+
+                        <div class="empty-skill">
+                            No skills available
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- SUMMARY -->
+
+                <div class="dashboard-card full-width">
+
+                    <h2>
+                        AI Recommendation
+                    </h2>
+
+                    <p id="summaryText">
+
+                        No analysis available yet.
+
+                    </p>
+
+                </div>
+
+                <!-- HISTORY -->
+
+                <div class="dashboard-card full-width">
+
+                    <h2>
+                        Previous Analyses
+                    </h2>
+
+                    <div id="historyContainer"></div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
