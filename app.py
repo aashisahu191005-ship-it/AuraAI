@@ -7,22 +7,10 @@ import PyPDF2
 from docx import Document
 from werkzeug.utils import secure_filename
 
-import mysql.connector
 
-# =========================================
-# MYSQL DATABASE CONNECTION
-# =========================================
 
-conn = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Aashisahu@123",
-    database="auraai"
-)
 
-cursor = conn.cursor()
 
-print("Database Connected Successfully")
 
 # =========================================
 # FLASK APP
@@ -284,9 +272,7 @@ def analyze_resume():
 
         )
 
-        cursor.execute(insert_query, values)
-
-        conn.commit()
+        
 
         print("DATA SAVED TO DATABASE")
 
