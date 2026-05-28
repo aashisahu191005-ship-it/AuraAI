@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AuraAI Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="login.css">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="bg-glow glow1"></div>
+    <div class="bg-glow glow2"></div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <!-- LOGO -->
+        <div class="logo">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <span>AuraAI</span>
+
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav>
+
+            <a href="support.html">
+                Support
+            </a>
+
+            <a href="signup.html" class="signup-btn">
+                Sign Up
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- MAIN -->
+    <main class="login-container">
+
+        <!-- LEFT -->
+        <section class="left-section">
+
+            <span class="tag">
+                AI Career Platform
+            </span>
+
+            <h1>
+                AI-Powered Career Growth for Students
+            </h1>
+
+            <p>
+                Get resume analysis, internship guidance,
+                AI-powered career insights, and smart skill tracking
+                designed for students.
+            </p>
+
+            <!-- FLOATING CARDS -->
+            <div class="floating-cards">
+
+                <!-- CARD -->
+                <div class="floating-card">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <div>
+
+                        <h3>Resume Score</h3>
+
+                        <span>AI Powered</span>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+                <div class="floating-card">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    <div>
+
+                        <h3>Internship Match</h3>
+
+                        <span>Career Insights</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- RIGHT -->
+        <section class="right-section">
+
+            <div class="login-card">
+
+                <h2>Welcome Back</h2>
+
+                <p>
+                    Login to continue your AI career journey.
+                </p>
+
+                <!-- FORM -->
+                <form id="loginForm">
+
+                    <!-- EMAIL -->
+                    <div class="input-group">
+
+                        <label>Work Email</label>
+
+                        <input type="email" id="email" placeholder="Enter your email">
+
+                        <span class="error-message" id="emailError">
+                            Please enter your email
+                        </span>
+
+                    </div>
+
+                    <!-- PASSWORD -->
+                    <div class="input-group">
+
+                        <label>Password</label>
+
+                        <input type="password" id="password" placeholder="Enter your password">
+
+                        <span class="error-message" id="passwordError">
+                            Please enter your password
+                        </span>
+
+                    </div>
+
+                    <!-- OPTIONS -->
+                    <div class="form-options">
+
+                        <label class="remember">
+
+                            <input type="checkbox">
+
+                            Remember Me
+
+                        </label>
+
+                        <a href="forgetpassword.html">
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+                    <!-- BUTTON -->
+                    <button type="submit" class="login-btn">
+                        Login
+                    </button>
+
+                </form>
+
+                <!-- BOTTOM -->
+                <div class="bottom-text">
+
+                    Don’t have an account?
+
+                    <a href="signup.html">
+                        Sign Up
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- JS -->
+    <script src="login.js"></script>
+
+</body>
+
+</html>

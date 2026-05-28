@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AuraAI Settings</title>
+
+    <!-- SETTINGS CSS -->
+
+    <link
+        rel="stylesheet"
+        href="settings.css"
+    >
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <!-- CROPPER CSS -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- MAIN CONTAINER -->
+
+    <div class="settings-container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+
+            <a
+                href="dashboard.html"
+                class="logo-link"
+            >
+
+                <div class="logo-section">
+
+                    <div class="logo-icon">
+
+                        <i class="fas fa-brain"></i>
+
+                    </div>
+
+                    <div class="logo-text">
+
+                        <h1>Aura AI</h1>
+
+                        <p>RECRUITER COMMAND</p>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+            <!-- MENU -->
+
+            <nav class="sidebar-menu">
+
+                <a href="dashboard.html">
+
+                    <i class="fas fa-chart-line"></i>
+
+                    Dashboard
+
+                </a>
+
+                <a href="upload.html">
+
+                    <i class="fas fa-upload"></i>
+
+                    Upload Resume
+
+                </a>
+
+                <a
+                    href="settings.html"
+                    class="active"
+                >
+
+                    <i class="fas fa-gear"></i>
+
+                    Settings
+
+                </a>
+
+                <a href="support.html">
+
+                    <i class="fas fa-headset"></i>
+
+                    Support
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <div class="settings-header">
+
+                <h1>
+                    Profile Settings
+                </h1>
+
+                <p>
+                    Manage your AuraAI student profile.
+                </p>
+
+            </div>
+
+            <!-- SETTINGS CARD -->
+
+            <div class="profile-card">
+
+                <!-- LEFT -->
+
+                <div class="profile-left">
+
+                    <div class="profile-image-wrapper">
+
+                        <img
+                            id="profilePreview"
+                            src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+                            alt="Profile"
+                        >
+
+                    </div>
+
+                    <input
+                        type="file"
+                        id="profileUpload"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <button id="uploadPhotoBtn">
+
+                        Change Photo
+
+                    </button>
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="profile-right">
+
+                    <div class="input-grid">
+
+                        <div class="input-group">
+
+                            <label>
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                placeholder="Enter your name"
+                            >
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                            >
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>
+                                College / University
+                            </label>
+
+                            <input
+                                type="text"
+                                placeholder="Enter your college"
+                            >
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>
+                                Course / Degree
+                            </label>
+
+                            <input
+                                type="text"
+                                placeholder="B.Tech CSE"
+                            >
+
+                        </div>
+
+                        <div class="input-group full-width">
+
+                            <label>
+                                Skills / Technologies
+                            </label>
+
+                            <input
+                                type="text"
+                                placeholder="Python, Machine Learning, Flask"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- BUTTONS -->
+
+            <div class="settings-actions">
+
+                <button id="cancelBtn">
+
+                    Cancel
+
+                </button>
+
+                <button id="saveBtn">
+
+                    Save Changes
+
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- =========================================
+         CROP MODAL
+    ========================================== -->
+
+    <div
+        class="crop-modal"
+        id="cropModal"
+    >
+
+        <div class="crop-box">
+
+            <div class="crop-header">
+
+                <h2>
+                    Crop Profile Photo
+                </h2>
+
+                <button id="closeCropModal">
+
+                    <i class="fas fa-times"></i>
+
+                </button>
+
+            </div>
+
+            <div class="crop-image-container">
+
+                <img id="cropImage">
+
+            </div>
+
+            <div class="crop-buttons">
+
+                <button id="cancelCropBtn">
+
+                    Cancel
+
+                </button>
+
+                <button id="saveCropBtn">
+
+                    Save Crop
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CROPPER JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js"></script>
+
+    <!-- SETTINGS JS -->
+
+    <script src="settings.js"></script>
+
+</body>
+
+</html>

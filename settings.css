@@ -1,0 +1,560 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+    background:#020b2d;
+    overflow-x:hidden;
+    color:white;
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.settings-container{
+    display:flex;
+    min-height:100vh;
+    background:#020b2d;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar{
+    width:290px;
+    min-height:100vh;
+
+    background:#08143c;
+
+    border-right:
+        1px solid rgba(255,255,255,0.05);
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:flex-start;
+    align-items:stretch;
+
+    padding:18px;
+
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+
+    overflow-y:auto;
+
+    z-index:1000;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo-link{
+    text-decoration:none;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    margin-bottom:26px;
+}
+
+.logo-icon{
+    width:72px;
+    height:72px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9b5cff,
+            #4f7cff
+        );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+
+    font-size:30px;
+
+    box-shadow:
+        0 0 18px rgba(123,92,255,0.35);
+}
+
+.logo-text h1{
+    font-size:24px;
+    font-weight:700;
+    color:white;
+}
+
+.logo-text p{
+    font-size:11px;
+    letter-spacing:3px;
+    margin-top:4px;
+    color:#c5d2ff;
+}
+
+/* =========================================
+   SIDEBAR MENU
+========================================= */
+
+.sidebar-menu{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.sidebar-menu a{
+    text-decoration:none;
+
+    color:white;
+
+    padding:16px 18px;
+
+    border-radius:18px;
+
+    font-size:18px;
+    font-weight:500;
+
+    display:flex;
+    align-items:center;
+
+    gap:14px;
+
+    transition:0.3s ease;
+}
+
+.sidebar-menu a i{
+    font-size:20px;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active{
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #2563eb
+        );
+
+    box-shadow:
+        0 10px 24px rgba(99,102,241,0.25);
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content{
+    flex:1;
+
+    margin-left:290px;
+
+    padding:22px 28px;
+
+    overflow-y:auto;
+
+    background:#020b2d;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.settings-header h1{
+    font-size:42px;
+    font-weight:700;
+
+    margin-bottom:6px;
+
+    line-height:1.1;
+}
+
+.settings-header p{
+    font-size:14px;
+    color:#c5d2ff;
+}
+
+/* =========================================
+   PROFILE CARD
+========================================= */
+
+.profile-card{
+    margin-top:22px;
+
+    background:#12215c;
+
+    border-radius:24px;
+
+    padding:26px;
+
+    display:flex;
+    align-items:center;
+
+    gap:28px;
+
+    border:
+        1px solid rgba(255,255,255,0.05);
+
+    max-width:1120px;
+}
+
+/* =========================================
+   PROFILE LEFT
+========================================= */
+
+.profile-left{
+    width:220px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.profile-image-wrapper{
+    width:170px;
+    height:170px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:
+        5px solid rgba(255,255,255,0.06);
+
+    margin-bottom:16px;
+}
+
+.profile-image-wrapper img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+/* =========================================
+   CHANGE PHOTO BUTTON
+========================================= */
+
+#uploadPhotoBtn{
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:16px;
+    font-weight:600;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #2563eb
+        );
+
+    transition:0.3s;
+}
+
+#uploadPhotoBtn:hover{
+    transform:translateY(-2px);
+}
+
+/* =========================================
+   PROFILE RIGHT
+========================================= */
+
+.profile-right{
+    flex:1;
+}
+
+.input-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:14px;
+}
+
+.full-width{
+    grid-column:1/3;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group label{
+    margin-bottom:6px;
+
+    font-size:14px;
+    font-weight:600;
+
+    color:white;
+}
+
+.input-group input{
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#1d2d74;
+
+    color:white;
+
+    font-size:14px;
+}
+
+.input-group input::placeholder{
+    color:#9ba7d8;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.settings-actions{
+    margin-top:18px;
+
+    display:flex;
+    justify-content:flex-end;
+
+    gap:14px;
+
+    max-width:1120px;
+}
+
+.settings-actions button{
+    padding:12px 24px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:600;
+
+    color:white;
+}
+
+#cancelBtn{
+    background:#334155;
+}
+
+#saveBtn{
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #2563eb
+        );
+}
+
+/* =========================================
+   CROP MODAL
+========================================= */
+
+.crop-modal{
+    position:fixed;
+    inset:0;
+
+    background:
+        rgba(0,0,0,0.75);
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    z-index:9999;
+}
+
+.crop-modal.active{
+    display:flex;
+}
+
+.crop-box{
+    width:90%;
+    max-width:500px;
+
+    background:#0f1d4f;
+
+    padding:22px;
+
+    border-radius:24px;
+}
+
+.crop-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:16px;
+}
+
+.crop-header h2{
+    font-size:22px;
+    color:white;
+}
+
+.crop-header button{
+    background:none;
+    border:none;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+}
+
+.crop-image-container{
+    width:100%;
+    height:320px;
+
+    overflow:hidden;
+
+    border-radius:16px;
+}
+
+.crop-image-container img{
+    width:100%;
+}
+
+.crop-buttons{
+    margin-top:18px;
+
+    display:flex;
+    justify-content:flex-end;
+    gap:14px;
+}
+
+.crop-buttons button{
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:14px;
+}
+
+#cancelCropBtn{
+    background:#334155;
+}
+
+#saveCropBtn{
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #2563eb
+        );
+}
+
+/* =========================================
+   CROPPER
+========================================= */
+
+.cropper-view-box,
+.cropper-face{
+    border-radius:50%;
+}
+
+.cropper-view-box{
+    outline:
+        2px solid white;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1100px){
+
+    .profile-card{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .profile-left{
+        width:100%;
+    }
+
+    .input-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full-width{
+        grid-column:auto;
+    }
+
+    .settings-header h1{
+        font-size:36px;
+    }
+}
+
+@media(max-width:768px){
+
+    .settings-container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        min-height:auto;
+
+        position:relative;
+    }
+
+    .main-content{
+        margin-left:0;
+        padding:20px;
+    }
+
+    .settings-header h1{
+        font-size:32px;
+    }
+
+    .profile-card{
+        padding:22px;
+    }
+
+    .profile-image-wrapper{
+        width:150px;
+        height:150px;
+    }
+}
