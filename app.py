@@ -274,7 +274,7 @@ def analyze_resume():
 
         
 
-        print("DATA SAVED TO DATABASE")
+        
 
         # =========================================
         # RESPONSE
