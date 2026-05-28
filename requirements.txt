@@ -1,0 +1,9 @@
+flask
+flask-cors
+mysql-connector-python
+PyPDF2
+python-docx
+werkzeug
+scikit-learn
+numpy
+pandas
